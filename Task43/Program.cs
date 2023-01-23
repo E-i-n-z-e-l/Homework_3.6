@@ -3,17 +3,7 @@
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
 
-// double PointOfIntersectionOfLinesX(double x1, double y1, double x2, double y2)
-// {
-//     double variableX = -(x1 -x2) / (y1 - y2);
-//     return variableX;
-// }
 
-// double PointOfIntersectionOfLinesY(double y1, double x, double x1)
-// {
-//     double variableY = y1 * PointOfIntersectionOfLinesX(b1, k1, b2, k2) + x1;
-//     return variableY;
-// }
 
 
 Console.WriteLine("Введите координату b1 ? ");
@@ -42,4 +32,9 @@ double PointOfIntersectionOfLinesY(double y1, double x, double x1)
 
 double varX = PointOfIntersectionOfLinesX(b1, k1, b2, k2);
 double varY = PointOfIntersectionOfLinesY(k1, PointOfIntersectionOfLinesX(b1, k1, b2, k2), b1);
-Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} => ({varX}, {varY})");
+
+if (k1 == k2)
+{
+    Console.Write("прямые параллельны друг другу");
+}
+else Console.Write($"b1 = {b1}, k1 = {k1}, b2 = {b2}, k2 = {k2} => ({varX}, {varY})") ;
